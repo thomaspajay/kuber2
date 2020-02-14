@@ -32,7 +32,7 @@ metadata:
   creationTimestamp: "2020-02-14T06:02:46Z"
   labels:
     app: atpsvcd5
-  name: atpsvcd5
+  name: atpsvcd
   namespace: atpns
   resourceVersion: "167053"
   selfLink: /api/v1/namespaces/default/services/atpsvcd5
