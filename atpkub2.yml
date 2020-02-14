@@ -34,9 +34,6 @@ metadata:
     app: atpsvcd5
   name: atpsvcd
   namespace: atpns
-  resourceVersion: "167053"
-  selfLink: /api/v1/namespaces/default/services/atpsvcd5
-  uid: 454cffc8-a91b-4f34-a819-1a7f8ab29697
 spec:
   ports:
   - name: "80"
