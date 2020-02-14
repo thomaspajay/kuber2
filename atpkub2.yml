@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: atpwebappd5
+  name: atpwebappd5
+  namespace: atpns
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: atpwebappd5
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: atpwebappd5
+    spec:
+      containers:
+      - image: ajaytp/atpwebd5:v1
+        name: atpwebd5
+        imagePullPolicy: Always
+        resources: {}
+status: {}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2020-02-14T06:02:46Z"
+  labels:
+    app: atpsvcd5
+  name: atpsvcd5
+  namespace: atpns
+  resourceVersion: "167053"
+  selfLink: /api/v1/namespaces/default/services/atpsvcd5
+  uid: 454cffc8-a91b-4f34-a819-1a7f8ab29697
+spec:
+  ports:
+  - name: "80"
+    nodePort: 30744
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: atpwebappd5
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}
